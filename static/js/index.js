@@ -36,12 +36,6 @@ function addRippleEffect() {
   });
 }
 
-// Language selector functionality
-document.getElementById('languageSelect')?.addEventListener('change', function() {
-  console.log('Language changed to:', this.value);
-  // Implement language switching logic here
-});
-
 // Authentication functions
 function handleGoogleLogin() {
   console.log('Google login initiated');

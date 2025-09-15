@@ -475,14 +475,14 @@
       <div class="water-illustration">
         <div class="water-drops">💧 🏠 💧</div>
       </div>
-      <h1 class="report-title">
+      <h1 class="report-title" data-translate-key="report_title">
         <i class="fas fa-chart-line"></i>
         RTRWH Feasibility Report
       </h1>
-      <p class="report-subtitle">Comprehensive Rainwater Harvesting Assessment</p>
+      <p class="report-subtitle" data-translate-key="report_subtitle">Comprehensive Rainwater Harvesting Assessment</p>
       <div class="status-indicator status-fully">
         <i class="fas fa-check-circle"></i>
-        Analysis Complete
+        <span data-translate-key="analysis_complete">Analysis Complete</span>
       </div>
     </div>
 
@@ -492,38 +492,38 @@
         <div class="section-icon">
           <i class="fas fa-user-circle"></i>
         </div>
-        <h2 class="section-title">Your Property Details</h2>
+        <h2 class="section-title" data-translate-key="property_details_title">Your Property Details</h2>
       </div>
       
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-user"></i></div>
-          <div class="label">Property Owner</div>
+          <div class="label" data-translate-key="property_owner_label">Property Owner</div>
           <div class="value">{{ user_data.name }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="label">Location</div>
+          <div class="label" data-translate-key="location_label">Location</div>
           <div class="value">{{ user_data.location_name.split(',')[0] }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-users"></i></div>
-          <div class="label">Household Size</div>
-          <div class="value">{{ user_data.household_size }} People</div>
+          <div class="label" data-translate-key="household_size_label">Household Size</div>
+          <div class="value">{{ user_data.household_size }} <span data-translate-key="people_unit">People</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-home"></i></div>
-          <div class="label">Rooftop Area</div>
+          <div class="label" data-translate-key="rooftop_area_label">Rooftop Area</div>
           <div class="value">{{ user_data.rooftop_area | round(1) }} m²</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-expand-arrows-alt"></i></div>
-          <div class="label">Open Space</div>
+          <div class="label" data-translate-key="open_space_label">Open Space</div>
           <div class="value">{{ user_data.open_space_area | round(1) }} m²</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-building"></i></div>
-          <div class="label">Property Type</div>
+          <div class="label" data-translate-key="property_type_label">Property Type</div>
           <div class="value">{{ user_data.property_type }}</div>
         </div>
       </div>
@@ -535,36 +535,36 @@
         <div class="section-icon">
           <i class="fas fa-globe-asia"></i>
         </div>
-        <h2 class="section-title">Location Analysis</h2>
+        <h2 class="section-title" data-translate-key="location_analysis_title">Location Analysis</h2>
       </div>
       
       <div class="disclaimer">
         <div class="disclaimer-content">
           <i class="fas fa-info-circle icon"></i>
-          <strong>Data Source:</strong> Analysis based on data for <strong>{{ location_data.Region_Name }}</strong>. 
-          This is a prototype simulation.
+          <strong data-translate-key="data_source_label">Data Source:</strong> <span data-translate-key="data_source_text">Analysis based on data for</span> <strong>{{ location_data.Region_Name }}</strong>. 
+          <span data-translate-key="prototype_simulation_text">This is a prototype simulation.</span>
         </div>
       </div>
       
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-cloud-rain"></i></div>
-          <div class="label">Annual Rainfall</div>
+          <div class="label" data-translate-key="annual_rainfall_label">Annual Rainfall</div>
           <div class="value">{{ location_data.Rainfall_mm | round }} mm</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-mountain"></i></div>
-          <div class="label">Soil Type</div>
+          <div class="label" data-translate-key="soil_type_label">Soil Type</div>
           <div class="value">{{ location_data.Soil_Type }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-tint"></i></div>
-          <div class="label">Groundwater Depth</div>
-          <div class="value">{{ location_data.Groundwater_Depth_m }} meters</div>
+          <div class="label" data-translate-key="groundwater_depth_label">Groundwater Depth</div>
+          <div class="value">{{ location_data.Groundwater_Depth_m }} <span data-translate-key="meters_unit">meters</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-road"></i></div>
-          <div class="label">Distance to Data Point</div>
+          <div class="label" data-translate-key="distance_to_data_point_label">Distance to Data Point</div>
           <div class="value">{{ location_data.distance | round(1) }} km</div>
         </div>
       </div>
@@ -576,35 +576,35 @@
         <div class="section-icon">
           <i class="fas fa-layer-group"></i>
         </div>
-        <h2 class="section-title">Hydrogeological Profile</h2>
+        <h2 class="section-title" data-translate-key="hydrogeological_profile_title">Hydrogeological Profile</h2>
       </div>
       
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-water"></i></div>
-          <div class="label">Aquifer Type</div>
+          <div class="label" data-translate-key="aquifer_type_label">Aquifer Type</div>
           <div class="value">{{ location_data.Aquifer_Type }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-arrows-alt-v"></i></div>
-          <div class="label">Aquifer Depth</div>
-          <div class="value">{{ location_data.Aquifer_Depth_Min_m }} - {{ location_data.Aquifer_Depth_Max_m }} meters</div>
+          <div class="label" data-translate-key="aquifer_depth_label">Aquifer Depth</div>
+          <div class="value">{{ location_data.Aquifer_Depth_Min_m }} - {{ location_data.Aquifer_Depth_Max_m }} <span data-translate-key="meters_unit">meters</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-filter"></i></div>
-          <div class="label">Infiltration Rate</div>
+          <div class="label" data-translate-key="infiltration_rate_label">Infiltration Rate</div>
           <div class="value">{{ location_data.Infiltration_Rate_mm_per_hr }} mm/hr</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-certificate"></i></div>
-          <div class="label">Water Quality</div>
+          <div class="label" data-translate-key="water_quality_label">Water Quality</div>
           <div class="value">{{ location_data.Water_Quality }}</div>
         </div>
       </div>
       
       <div class="recommendation status-{{ 'fully' if analysis.safety_check.is_safe else 'not' }}">
         <i class="fas fa-thumbs-up"></i>
-        <strong>Remarks:</strong> {{ location_data.Remarks }}
+        <strong data-translate-key="remarks_label">Remarks:</strong> {{ location_data.Remarks }}
       </div>
     </div>
 
@@ -614,38 +614,38 @@
         <div class="section-icon">
           <i class="fas fa-calculator"></i>
         </div>
-        <h2 class="section-title">Feasibility Assessment</h2>
+        <h2 class="section-title" data-translate-key="feasibility_assessment_title">Feasibility Assessment</h2>
       </div>
       
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-cloud-rain"></i></div>
-          <div class="label">Annual Harvest Potential</div>
-          <div class="value">{{ "{:,.0f}".format(analysis.runoff_data.annual_liters) }} Liters</div>
+          <div class="label" data-translate-key="annual_harvest_potential_label">Annual Harvest Potential</div>
+          <div class="value>{{ "{:,.0f}".format(analysis.runoff_data.annual_liters) }} <span data-translate-key="liters_unit">Liters</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-home"></i></div>
-          <div class="label">Household Demand</div>
-          <div class="value">{{ "{:,.0f}".format(analysis.annual_demand) }} Liters</div>
+          <div class="label" data-translate-key="household_demand_label">Household Demand</div>
+          <div class="value>{{ "{:,.0f}".format(analysis.annual_demand) }} <span data-translate-key="liters_unit">Liters</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-percentage"></i></div>
-          <div class="label">Demand Coverage</div>
-          <div class="value">{{ analysis.feasibility_percentage }}%</div>
+          <div class="label" data-translate-key="demand_coverage_label">Demand Coverage</div>
+          <div class="value>{{ analysis.feasibility_percentage }}%</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-check-circle"></i></div>
-          <div class="label">Feasibility Status</div>
+          <div class="label" data-translate-key="feasibility_status_label">Feasibility Status</div>
           <div class="value status-{{ analysis.feasibility_status.lower().split(' ')[0] }}">{{ analysis.feasibility_status }}</div>
         </div>
       </div>
       
       <div class="recommendation status-{{ analysis.feasibility_status.lower().split(' ')[0] }}">
         <i class="fas fa-star"></i>
-        <strong>Summary:</strong> 
-        {% if analysis.feasibility_status == "Fully Feasible" %} Your property can likely meet its entire water demand through rainwater harvesting.
-        {% elif analysis.feasibility_status == "Partially Feasible" %} Your property can significantly reduce its reliance on external water sources. A system is highly recommended.
-        {% else %} While harvesting may not meet all demand, it can still provide a useful supplementary water source.
+        <strong data-translate-key="summary_label">Summary:</strong> 
+        {% if analysis.feasibility_status == "Fully Feasible" %} <span data-translate-key="summary_fully_feasible">Your property can likely meet its entire water demand through rainwater harvesting.</span>
+        {% elif analysis.feasibility_status == "Partially Feasible" %} <span data-translate-key="summary_partially_feasible">Your property can significantly reduce its reliance on external water sources. A system is highly recommended.</span>
+        {% else %} <span data-translate-key="summary_not_feasible">While harvesting may not meet all demand, it can still provide a useful supplementary water source.</span>
         {% endif %}
       </div>
     </div>
@@ -656,7 +656,7 @@
         <div class="section-icon">
           <i class="fas fa-chart-bar"></i>
         </div>
-        <h2 class="section-title">Supply vs. Demand Analysis</h2>
+        <h2 class="section-title" data-translate-key="supply_demand_analysis_title">Supply vs. Demand Analysis</h2>
       </div>
       
       <div class="chart-container">
@@ -670,16 +670,16 @@
         <div class="section-icon">
           <i class="fas fa-lightbulb"></i>
         </div>
-        <h2 class="section-title">Personalized Recommendations</h2>
+        <h2 class="section-title" data-translate-key="recommendations_title">Personalized Recommendations</h2>
       </div>
       
       <div class="info-item">
         <div class="icon"><i class="fas fa-medal"></i></div>
-        <div class="label">Category {{ analysis.category.category }}: {{ analysis.category.name }}</div>
+        <div class="label" data-translate-key="category_label">Category {{ analysis.category.category }}: {{ analysis.category.name }}</div>
         <div class="value">{{ analysis.category.description }}</div>
       </div>
       
-      <h3 style="color: #22d3ee; margin: 2rem 0 1rem 0;">
+      <h3 style="color: #22d3ee; margin: 2rem 0 1rem 0;" data-translate-key="recommended_structures_title">
         <i class="fas fa-tools"></i> Recommended Structures
       </h3>
       
@@ -704,25 +704,25 @@
         <div class="section-icon">
           <i class="fas fa-shield-alt"></i>
         </div>
-        <h2 class="section-title">Safety Assessment</h2>
+        <h2 class="section-title" data-translate-key="safety_assessment_title">Safety Assessment</h2>
       </div>
       
       {% if analysis.safety_check.is_safe %}
       <div class="status-indicator status-fully">
         <i class="fas fa-check-circle"></i>
-        Groundwater recharge is safe for your location
+        <span data-translate-key="recharge_safe">Groundwater recharge is safe for your location</span>
       </div>
       <div class="recommendation status-fully">
         <i class="fas fa-thumbs-up"></i>
-        <strong>All Clear:</strong> No significant geological or environmental risks detected. Artificial recharge is likely safe to implement.
+        <strong data-translate-key="all_clear_label">All Clear:</strong> <span data-translate-key="all_clear_text">No significant geological or environmental risks detected. Artificial recharge is likely safe to implement.</span>
       </div>
       {% else %}
       <div class="status-indicator status-not">
         <i class="fas fa-exclamation-triangle"></i>
-        Caution Advised for Groundwater Recharge
+        <span data-translate-key="recharge_caution">Caution Advised for Groundwater Recharge</span>
       </div>
       <div class="recommendation status-not">
-        <strong>Potential Issues:</strong> {{ analysis.safety_check.safety_issues | join(', ') }}. Consider these alternatives: {{ analysis.safety_check.alternatives | join(', ') }}.
+        <strong data-translate-key="potential_issues_label">Potential Issues:</strong> {{ analysis.safety_check.safety_issues | join(', ') }}. <span data-translate-key="consider_alternatives">Consider these alternatives:</span> {{ analysis.safety_check.alternatives | join(', ') }}.
       </div>
       {% endif %}
     </div>
@@ -733,20 +733,20 @@
         <div class="section-icon">
           <i class="fas fa-ruler-combined"></i>
         </div>
-        <h2 class="section-title">Recommended Dimensions & Costs</h2>
+        <h2 class="section-title" data-translate-key="dimensions_costs_title">Recommended Dimensions & Costs</h2>
       </div>
       
       <div class="structure-grid">
         <div class="structure-card">
           <div class="icon"><i class="fas fa-cube"></i></div>
-          <div class="title">Storage Tank</div>
+          <div class="title" data-translate-key="storage_tank_title">Storage Tank</div>
           <div class="info-grid" style="grid-template-columns: 1fr; gap: 0.5rem; margin-top: 1rem;">
             <div style="display: flex; justify-content: space-between;">
-              <span>Capacity:</span>
-              <strong>{{ "{:,.0f}".format(analysis.structure_dimensions.storage.capacity_liters) }} Liters</strong>
+              <span data-translate-key="capacity_label">Capacity:</span>
+              <strong>{{ "{:,.0f}".format(analysis.structure_dimensions.storage.capacity_liters) }} <span data-translate-key="liters_unit">Liters</span></strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span>Estimated Cost:</span>
+              <span data-translate-key="estimated_cost_label">Estimated Cost:</span>
               <strong>{{ analysis.structure_dimensions.storage.material_cost }}</strong>
             </div>
           </div>
@@ -755,14 +755,14 @@
         {% if analysis.structure_dimensions.pit %}
         <div class="structure-card">
           <div class="icon"><i class="fas fa-hole"></i></div>
-          <div class="title">Recharge Pit</div>
+          <div class="title" data-translate-key="recharge_pit_title">Recharge Pit</div>
           <div class="info-grid" style="grid-template-columns: 1fr; gap: 0.5rem; margin-top: 1rem;">
             <div style="display: flex; justify-content: space-between;">
-              <span>Dimensions:</span>
+              <span data-translate-key="dimensions_label">Dimensions:</span>
               <strong>{{ analysis.structure_dimensions.pit.length_m }}m × {{ analysis.structure_dimensions.pit.width_m }}m × {{ analysis.structure_dimensions.pit.depth_m }}m</strong>
             </div>
             <div style="display: flex; justify-content: space-between;">
-              <span>Estimated Cost:</span>
+              <span data-translate-key="estimated_cost_label">Estimated Cost:</span>
               <strong>{{ analysis.structure_dimensions.pit.material_cost }}</strong>
             </div>
           </div>
@@ -777,14 +777,14 @@
         <div class="section-icon">
           <i class="fas fa-filter"></i>
         </div>
-        <h2 class="section-title">Water Purification Plan</h2>
+        <h2 class="section-title" data-translate-key="purification_plan_title">Water Purification Plan</h2>
       </div>
       
       <p style="margin-bottom: 1.5rem; color: rgba(255, 255, 255, 0.8);">
-        <strong>For your intended use:</strong> {{ user_data.intended_use }}
+        <strong data-translate-key="intended_use_label">For your intended use:</strong> {{ user_data.intended_use }}
       </p>
       
-      <h3 style="color: #22d3ee; margin-bottom: 1rem;">Treatment Sequence:</h3>
+      <h3 style="color: #22d3ee; margin-bottom: 1rem;" data-translate-key="treatment_sequence_title">Treatment Sequence:</h3>
       
       <div class="treatment-sequence">
         {% for step in analysis.purification.treatment_sequence %}
@@ -801,12 +801,12 @@
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-calendar-alt"></i></div>
-          <div class="label">Maintenance Schedule</div>
+          <div class="label" data-translate-key="maintenance_schedule_label">Maintenance Schedule</div>
           <div class="value">{{ analysis.purification.maintenance_schedule }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-rupee-sign"></i></div>
-          <div class="label">Treatment System Cost</div>
+          <div class="label" data-translate-key="treatment_cost_label">Treatment System Cost</div>
           <div class="value">{{ analysis.purification.estimated_cost }}</div>
         </div>
       </div>
@@ -820,36 +820,35 @@
         <div class="section-icon">
           <i class="fas fa-chart-pie"></i>
         </div>
-        <h2 class="section-title">Financial Analysis</h2>
+        <h2 class="section-title" data-translate-key="financial_analysis_title">Financial Analysis</h2>
       </div>
       
       <div class="info-grid">
         <div class="info-item">
           <div class="icon"><i class="fas fa-hammer"></i></div>
-          <div class="label">Initial Investment</div>
+          <div class="label" data-translate-key="initial_investment_label">Initial Investment</div>
           <div class="value">₹{{ "{:,.0f}".format(analysis.cost_analysis.total_construction_cost) }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-piggy-bank"></i></div>
-          <div class="label">Annual Savings</div>
+          <div class="label" data-translate-key="annual_savings_label">Annual Savings</div>
           <div class="value">₹{{ "{:,.0f}".format(analysis.cost_analysis.annual_net_savings) }}</div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-clock"></i></div>
-          <div class="label">Payback Period</div>
-          <div class="value">{{ analysis.cost_analysis.payback_years }} years</div>
+          <div class="label" data-translate-key="payback_period_label">Payback Period</div>
+          <div class="value">{{ analysis.cost_analysis.payback_years }} <span data-translate-key="years_unit">years</span></div>
         </div>
         <div class="info-item">
           <div class="icon"><i class="fas fa-trophy"></i></div>
-          <div class="label">ROI (20 years)</div>
+          <div class="label" data-translate-key="roi_label">ROI (20 years)</div>
           <div class="value">{{ analysis.cost_analysis.roi_percentage }}%</div>
         </div>
       </div>
       
       <div class="recommendation status-fully">
         <i class="fas fa-thumbs-up"></i>
-        <strong>Financially Viable:</strong> The system will pay for itself within {{ analysis.cost_analysis.payback_years }} years 
-        and provide significant long-term savings on water costs.
+        <strong data-translate-key="financially_viable_label">Financially Viable:</strong> <span data-translate-key="financially_viable_text">The system will pay for itself within {{ analysis.cost_analysis.payback_years }} years and provide significant long-term savings on water costs.</span>
       </div>
     </div>
 
@@ -857,35 +856,35 @@
     
     <!-- Action Buttons -->
     <div class="action-buttons animate-fadeInUp">
-      <h3 style="color: #22d3ee; margin-bottom: 2rem; text-align: center;">
+      <h3 style="color: #22d3ee; margin-bottom: 2rem; text-align: center;" data-translate-key="take_action_title">
         <i class="fas fa-hands-helping"></i>
         Take Action Today
       </h3>
       
       <a href="{{ url_for('download_report', entry_id=user_data.id) }}" class="glass-button primary">
         <i class="fas fa-download"></i>
-        Download PDF Report
+        <span data-translate-key="download_pdf_btn">Download PDF Report</span>
       </a>
       
       <a href="{{ url_for('subsidy_checker_page') }}?state={{ location_data.State }}&plotSize={{ (user_data.rooftop_area + user_data.open_space_area)|round }}&location=urban&buildingType={{ user_data.property_type.lower().replace('institutional', 'government') }}" class="glass-button">
         <i class="fas fa-hand-holding-usd"></i>
-        Check Subsidy Eligibility
+        <span data-translate-key="check_subsidy_btn">Check Subsidy Eligibility</span>
       </a>
       
       <a href="{{ url_for('index_page') }}" class="glass-button">
         <i class="fas fa-redo"></i>
-        New Assessment
+        <span data-translate-key="new_assessment_btn">New Assessment</span>
       </a>
     </div>
 
     <!-- Footer -->
     <div style="text-align: center; margin: 3rem 0 2rem 0; padding: 2rem; background: rgba(255, 255, 255, 0.05); border-radius: 12px;">
-      <p style="color: rgba(255, 255, 255, 0.6); margin: 0;">
+      <p style="color: rgba(255, 255, 255, 0.6); margin: 0;" data-translate-key="footer_text">
         <i class="fas fa-leaf" style="color: #10b981; margin-right: 0.5rem;"></i>
         Supporting sustainable water management across India
       </p>
       <p style="color: rgba(255, 255, 255, 0.4); margin: 0.5rem 0 0 0; font-size: 0.9rem;">
-        Report generated on: <span id="currentDate"></span>
+        <span data-translate-key="report_generated_on">Report generated on:</span> <span id="currentDate"></span>
       </p>
     </div>
   </div>
@@ -1069,5 +1068,6 @@
       document.body.classList.remove('printing');
     });
   </script>
+  <script src="{{ url_for('static', filename='js/translation.js') }}" defer></script>
 </body>
 </html>
